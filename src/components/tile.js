@@ -11,16 +11,16 @@ AFRAME.registerComponent('tile', {
   },
   init () {
     const { row, col, nrow, ncol } = this.data
-    const angleOffset = ANGLE_STEP * (nrow / 2 + 0.5) + 90
+    const angleOffset = ANGLE_STEP * (ncol / 2 - 0.5) + 90
 
-    const phi = this.data.col * ANGLE_STEP - angleOffset
+    const phi = col * ANGLE_STEP - angleOffset
     const phiRad = toRadians(phi)
     this.el.setAttribute('rotation', {
       y: -phi - 90
     })
     this.el.setAttribute('position', {
       x: CYLINDER_RADIUS * Math.cos(phiRad),
-      y: 0.5 - row,
+      y: (nrow - 1) / 2 - row,
       z: CYLINDER_RADIUS * Math.sin(phiRad) + CAMERA_OFFSET
     })
 

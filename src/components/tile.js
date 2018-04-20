@@ -2,7 +2,7 @@ const CYLINDER_RADIUS = 5
 const ANGLE_STEP = 12
 const CAMERA_OFFSET = 2.5
 
-AFRAME.registerComponent('tile', {
+export const tile = {
   schema: {
     row: { type: 'number' },
     col: { type: 'number' },
@@ -33,7 +33,7 @@ AFRAME.registerComponent('tile', {
       color: '#FFFFFF'
     })
   }
-})
+}
 
 function toRadians (degrees) {
   return degrees / 180 * Math.PI

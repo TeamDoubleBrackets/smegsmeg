@@ -32,6 +32,10 @@ export const tile = {
     this.el.setAttribute('material', {
       color: '#FFFFFF'
     })
+
+    this.el.addEventListener('click', function () {
+      console.log('click')
+    })
   }
 }
 

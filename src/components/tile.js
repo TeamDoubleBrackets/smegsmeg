@@ -6,16 +6,16 @@ AFRAME.registerComponent('tile', {
   init () {
     this.el.setAttribute('geometry', {
       primitive: 'plane',
-      height: 0.7,
-      width: 0.7
+      height: 0.8,
+      width: 0.8
     })
     this.el.setAttribute('material', {
       color: '#FFFFFF'
     })
     this.el.setAttribute('position', {
-      x: (2 - this.data.col) / 2 - 0.5,
-      y: (2 - this.data.row) / 2 - 0.5,
-      z: -2
+      x: 2 - this.data.col - 0.5,
+      y: 0.5 - this.data.row,
+      z: -2.5
     })
   }
 })

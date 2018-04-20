@@ -1,9 +1,29 @@
+const CYLINDER_RADIUS = 5
+const ANGLE_STEP = 12
+const CAMERA_OFFSET = 2.5
+
 AFRAME.registerComponent('tile', {
   schema: {
     row: { type: 'number' },
-    col: { type: 'number' }
+    col: { type: 'number' },
+    nrow: { type: 'number' },
+    ncol: { type: 'number' }
   },
   init () {
+    const { row, col, nrow, ncol } = this.data
+    const angleOffset = ANGLE_STEP * (nrow / 2 + 0.5) + 90
+
+    const phi = this.data.col * ANGLE_STEP - angleOffset
+    const phiRad = toRadians(phi)
+    this.el.setAttribute('rotation', {
+      y: -phi - 90
+    })
+    this.el.setAttribute('position', {
+      x: CYLINDER_RADIUS * Math.cos(phiRad),
+      y: 0.5 - row,
+      z: CYLINDER_RADIUS * Math.sin(phiRad) + CAMERA_OFFSET
+    })
+
     this.el.setAttribute('geometry', {
       primitive: 'plane',
       height: 0.8,
@@ -12,10 +32,9 @@ AFRAME.registerComponent('tile', {
     this.el.setAttribute('material', {
       color: '#FFFFFF'
     })
-    this.el.setAttribute('position', {
-      x: 2 - this.data.col - 0.5,
-      y: 0.5 - this.data.row,
-      z: -2.5
-    })
   }
 })
+
+function toRadians (degrees) {
+  return degrees / 180 * Math.PI
+}

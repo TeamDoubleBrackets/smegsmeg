@@ -10,7 +10,9 @@
 <body>
   <a-scene>
     <a-sky color="#6495ED"></a-sky>
-    <a-camera position="0 0 0"></a-camera>
+    <a-camera position="0 0 0">
+      <a-cylinder position="0 0 -1" radius="0.01" height="0.1" opacity="1" rotation="-90 0 0" color="red"></a-cylinder>
+    </a-camera>
     <a-entity light="type: hemisphere; color: #ffffff; intensity: 1.0;"></a-entity>
 
     <a-entity cylinder-grid="rows: 5; columns: 10"></a-entity>

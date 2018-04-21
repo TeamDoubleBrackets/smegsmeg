@@ -1,4 +1,5 @@
 import { toRadians } from '../utils'
+import { tileClickHandler } from '../tileClickHandler'
 
 export const tile = {
   schema: {
@@ -7,7 +8,8 @@ export const tile = {
     nrow: { type: 'number' },
     ncol: { type: 'number' },
     icon: { type: 'asset' },
-    label: { type: 'string' }
+    label: { type: 'string' },
+    link: { type: 'string' }
   },
   init () {
     setTileTransform(this)
@@ -15,7 +17,6 @@ export const tile = {
 
     const image = document.createElement('a-image')
     image.className = 'image'
-    image.setAttribute('src', this.data.icon)
     image.setAttribute('width', 0.5)
     image.setAttribute('height', 0.5)
     image.setAttribute('position', { x: 0, y: 0.1, z: 0.02 })
@@ -24,7 +25,6 @@ export const tile = {
     const label = document.createElement('a-entity')
     label.className = 'label'
     label.setAttribute('text', {
-      value: this.data.label,
       align: 'center',
       color: '#000',
       width: 3
@@ -32,17 +32,20 @@ export const tile = {
     label.setAttribute('position', { x: 0, y: -0.27, z: 0.02 })
     this.el.appendChild(label)
 
-    this.el.addEventListener('click', function () {
-      console.log('click')
-    })
+    this.el.addEventListener('click', () =>
+      this.data.link && tileClickHandler(this.data.link)
+    )
   },
   update (oldData) {
     if (oldData.icon !== this.data.icon) {
       this.el.querySelector('.image').setAttribute('src', this.data.icon)
     }
     if (oldData.label !== this.data.label) {
-      this.el.querySelector('.label').setAttribute('value', this.data.label)
+      this.el.querySelector('.label').setAttribute('text', {
+        value: this.data.label
+      })
     }
+    this.el.classList.toggle('clickable', !!this.data.link)
   }
 }
 

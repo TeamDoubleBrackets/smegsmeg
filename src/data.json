@@ -44,27 +44,33 @@
   "items-chairs": [
     {
       "icon": "images/nickcage.png",
-      "label": "Krzesło komfort"
+      "label": "Krzesło komfort",
+      "link": "product"
     },
     {
       "icon": "images/nickcage.png",
-      "label": "Siedzisko prezesa"
+      "label": "Siedzisko prezesa",
+      "link": "product"
     },
     {
       "icon": "images/nickcage.png",
-      "label": "Krzesło komfort"
+      "label": "Krzesło komfort",
+      "link": "product"
     },
     {
       "icon": "images/nickcage.png",
-      "label": "Siedzisko prezesa"
+      "label": "Siedzisko prezesa",
+      "link": "product"
     },
     {
       "icon": "images/nickcage.png",
-      "label": "Krzesło komfort"
+      "label": "Krzesło komfort",
+      "link": "product"
     },
     {
       "icon": "images/nickcage.png",
-      "label": "Siedzisko prezesa"
+      "label": "Siedzisko prezesa",
+      "link": "product"
     },
     {
       "icon": "images/nickcage.png",

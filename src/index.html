@@ -13,8 +13,8 @@
     <a-scene>
         <a-assets>
             <img id="gallery" crossorigin="anonymous" src="images/bg6.jpg">
-            <img id="productDesc1" crossorigin="anonymous" src="images/desc1.png">
-            <img id="productDesc2" crossorigin="anonymous" src="images/desc2.png">
+            <img id="productDesc1" crossorigin="anonymous" src="images/opis.png">
+            <img id="productDesc2" crossorigin="anonymous" src="images/chairs.png">
             <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
             <a-asset-item id="chair" src="m_chair/scene.gltf"></a-asset-item>
         </a-assets>
@@ -32,7 +32,7 @@
 
         <a-cylinder color="white" height=".64" radius="-6" theta-start="71" theta-length="38" side="double" position="0 1.36 3.52" rotation="0 -90 0"></a-cylinder>
 
-        <a-entity id="grid" data-grid="categories" visible="true"></a-entity>
+        <a-entity id="grid" data-grid="categories" visible="false"></a-entity>
 
         <a-entity id="back" class="clickable" back-button visible="false" position="-1.7 1.33 -2.2" rotation="0 15 0">
             <a-image src="images/arrow_back.png" width=0.3 height=0.3></a-image>
@@ -40,8 +40,8 @@
 
         <a-image src="images/logo.png" position="0 1.3 -2.4" width="1.4" height="0.7"></a-image>
 
-        <a-entity id="product" visible="false">
-            <a-image id="product-desc-1" src="#productDesc1" material="alphaTest: 0.5" width="2" height="2" rotation="0 20 0" position="-2.5 0 -3"></a-image>
+        <a-entity id="product" visible="true">
+            <a-image id="product-desc-1" src="#productDesc1" width="1.46" height="2" rotation="0 20 0" position="-2.2 0 -3"></a-image>
             <a-box opacity="0" position="0 0 -2.5">
                 <a-entity position="0 0 -1" scale="0.015 0.015 0.015" rotation="0 0 0" gltf-model="#chair">
                     <a-animation attribute="rotation"
@@ -53,7 +53,16 @@
                     repeat="indefinite"></a-animation>
                 </a-entity>
             </a-box>
-            <a-image id="product-desc-2" src="#productDesc2" material="alphaTest: 0.5" width="2" height="2" rotation="0 -20 0" position="2.5 0 -3"></a-image>
+            <a-image id="product-desc-2" src="#productDesc2" width="1.46" height="2" rotation="0 -20 0" position="2.2 0 -3"></a-image>
+
+            <a-image src="images/price.png" position="0 -1 -1.5" rotation="-25 0 0" height="0.8"></a-image>
+
+            <a-entity position="-1.1 -1 -1.5" rotation="-30 22 0">
+                <a-image src="images/cart.png" position="0 0.2 0" width="0.8" height="0.3"></a-image>
+            </a-entity>
+            <a-entity position="1.1 -1 -1.5" rotation="-30 -22 0">
+                <a-image src="images/buy2.png" position="0 0.2 0" width="0.8" height="0.3"></a-image>
+            </a-entity>
         </a-entity>
     </a-scene>
   </a-scene>

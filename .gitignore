@@ -1,2 +1,5 @@
+# Gitignore for A-frame VR project
+
 node_modules/
 dist/
+.vscode

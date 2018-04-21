@@ -1,5 +1,5 @@
 import { toRadians } from '../utils'
-import { tileClickHandler } from '../tileClickHandler'
+import { linkHandler } from '../linkHandler'
 
 export const tile = {
   schema: {
@@ -34,7 +34,7 @@ export const tile = {
     this.el.appendChild(label)
 
     this.el.addEventListener('click', () =>
-      this.data.link && tileClickHandler(this.data.link)
+      this.data.link && linkHandler(this.data.link)
     )
   },
   update (oldData) {

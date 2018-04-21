@@ -1,83 +1,83 @@
 {
     "categories": [
         {
-            "icon": "icons/shirt.svg",
+            "icon": "icons/shirt.png",
             "label": "Shirts",
             "link": "items-chairs"
         },
         {
-            "icon": "icons/jeans.svg",
+            "icon": "icons/jeans.png",
             "label": "Pants",
             "link": "items-chairs"
         },
         {
-            "icon": "icons/shoe.svg",
+            "icon": "icons/shoe.png",
             "label": "Shoes",
             "link": "items-chairs"
         },
         {
-            "icon": "icons/dress.svg",
+            "icon": "icons/dress.png",
             "label": "Dresses",
             "link": "items-chairs"
         },
         {
-            "icon": "icons/chair.svg",
+            "icon": "icons/chair.png",
             "label": "Chairs",
             "link": "items-chairs"
         },
         {
-            "icon": "icons/armchair.svg",
+            "icon": "icons/armchair.png",
             "label": "Armchairs",
             "link": "items-chairs"
         },
         {
-            "icon": "icons/table.svg",
+            "icon": "icons/table.png",
             "label": "Tables",
             "link": "items-chairs"
         },
         {
-            "icon": "icons/lawn-mower.svg",
+            "icon": "icons/lawn-mower.png",
             "label": "Kosiarks",
             "link": "items-chairs"
         }
     ],
     "items-chairs": [
         {
-            "icon": "icons/chairs/chair_basic.svg",
+            "icon": "icons/chairs/chair_basic.png",
             "label": "Basic chair",
             "link": "product"
         },
         {
-            "icon": "icons/chairs/chair_premium.svg",
+            "icon": "icons/chairs/chair_premium.png",
             "label": "Extended chair",
             "link": "product"
         },
         {
-            "icon": "icons/chairs/chair_ultra.svg",
+            "icon": "icons/chairs/chair_ultra.png",
             "label": "Ultra chair",
             "link": "product"
         },
         {
-            "icon": "icons/chairs/chair_ultramaster.svg",
+            "icon": "icons/chairs/chair_ultramaster.png",
             "label": "#TDB signed chair",
             "link": "product"
         },
         {
-            "icon": "icons/chairs/chair_wedkarz_mode_ON.svg",
+            "icon": "icons/chairs/chair_wedkarz_mode_ON.png",
             "label": "\"Wedkarz\" chair",
             "link": "product"
         },
         {
-            "icon": "icons/chairs/krzeslostol.svg",
+            "icon": "icons/chairs/krzeslostol.png",
             "label": "\"Chairtable\"",
             "link": "product"
         },
         {
-            "icon": "icons/heart.svg",
+            "icon": "icons/heart.png",
             "label": "Coming soon"
         },
         {
-            "icon": "icons/heart.svg",
+            "icon": "icons/heart.png",
             "label": "Coming soon"
         }
     ]

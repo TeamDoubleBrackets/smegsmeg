@@ -12,7 +12,8 @@ export const cylinderGrid = {
           col,
           nrow: this.data.rows,
           ncol: this.data.columns,
-          icon: 'images/nickcage.png'
+          icon: 'images/nickcage.png',
+          label: 'I <3 Nick'
         })
         this.el.appendChild(child)
       }

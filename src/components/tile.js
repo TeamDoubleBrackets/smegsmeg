@@ -6,7 +6,8 @@ export const tile = {
     col: { type: 'number' },
     nrow: { type: 'number' },
     ncol: { type: 'number' },
-    icon: { type: 'asset' }
+    icon: { type: 'asset' },
+    label: { type: 'string' }
   },
   init () {
     setTileTransform(this)
@@ -14,10 +15,20 @@ export const tile = {
 
     const image = document.createElement('a-image')
     image.setAttribute('src', this.data.icon)
-    image.setAttribute('width', 0.7)
-    image.setAttribute('height', 0.7)
-    image.setAttribute('position', { x: 0, y: 0, z: 0.02 })
+    image.setAttribute('width', 0.5)
+    image.setAttribute('height', 0.5)
+    image.setAttribute('position', { x: 0, y: 0.1, z: 0.02 })
     this.el.appendChild(image)
+
+    const label = document.createElement('a-entity')
+    label.setAttribute('text', {
+      value: this.data.label,
+      align: 'center',
+      color: '#000',
+      width: 3
+    })
+    label.setAttribute('position', { x: 0, y: -0.27, z: 0.02 })
+    this.el.appendChild(label)
 
     this.el.addEventListener('click', function () {
       console.log('click')

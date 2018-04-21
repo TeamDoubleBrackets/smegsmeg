@@ -11,22 +11,22 @@
             "link": "items-chairs"
         },
         {
-            "icon": "icons/shoe.png",
+            "icon": "icons/sneakers.png",
             "label": "Shoes",
             "link": "items-chairs"
         },
         {
             "icon": "icons/dress.png",
-            "label": "Dresses",
+            "label": "Dresy",
             "link": "items-chairs"
         },
         {
-            "icon": "icons/chair.png",
+            "icon": "icons/desk-chair.png",
             "label": "Chairs",
             "link": "items-chairs"
         },
         {
-            "icon": "icons/armchair.png",
+            "icon": "icons/sofa.png",
             "label": "Armchairs",
             "link": "items-chairs"
         },

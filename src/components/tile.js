@@ -46,6 +46,7 @@ export const tile = {
         value: this.data.label
       })
     }
+    this.el.classList.toggle('clickable', !!this.data.link)
   }
 }
 

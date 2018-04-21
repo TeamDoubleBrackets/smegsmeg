@@ -16,6 +16,7 @@
             <img id="productDesc1" crossorigin="anonymous" src="images/desc1.png">
             <img id="productDesc2" crossorigin="anonymous" src="images/desc2.png">
             <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+            <a-asset-item id="chair" src="m_chair/scene.gltf"></a-asset-item>
         </a-assets>
         <a-sky id="image-360" radius="10" src="#gallery" rotation="0 -50 0"></a-sky>
         <a-camera position="0 0 0">
@@ -30,8 +31,7 @@
         <a-entity id="grid" data-grid="categories" visible="true"></a-entity>
 
         <a-entity id="back" class="clickable" back-button visible="false"
-          position="-2 .9 -1.7" rotation="0 35 0"
-        >
+          position="-2 .9 -1.7" rotation="0 35 0">
             <a-image src="images/arrow_back.png" width=0.3 height=0.3></a-image>
         </a-entity>
 
@@ -39,7 +39,16 @@
 
         <a-entity id="product" visible="false">
             <a-image id="product-desc-1" src="#productDesc1" material="alphaTest: 0.5" width="2" height="2" rotation="0 20 0" position="-2.5 0 -3"></a-image>
-            <a-box color="tomato" position="0 0 -2.5"></a-box>
+            <a-box opacity="0" position="0 0 -2.5">
+                <a-entity position="0 0 -1" scale="0.015 0.015 0.015" rotation="0 0 0" gltf-model="#chair">
+                    <a-animation attribute="rotation"
+                    dur="30000"
+                    fill="forwards"
+                    to="45 2160 10"
+                    easing="linear"
+                    repeat="indefinite"></a-animation>
+                </a-entity>
+            </a-box>
             <a-image id="product-desc-2" src="#productDesc2" material="alphaTest: 0.5" width="2" height="2" rotation="0 -20 0" position="2.5 0 -3"></a-image>
         </a-entity>
     </a-scene>

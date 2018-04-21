@@ -28,10 +28,11 @@
         </a-camera>
         <a-entity light="type: hemisphere; color: #ffffff; intensity: 1.0;"></a-entity>
 
+        <a-entity geometry="primitive: cylinder; width: 0.2; radius: 6; height: 0.6; segmentsRadial: 88; thetaLength: -180; openEnded: true;" material="color: #ffffff; shader: flat" position="0 1.35 3.5" rotation="0 -90 0"></a-entity>
+
         <a-entity id="grid" data-grid="categories" visible="true"></a-entity>
 
-        <a-entity id="back" class="clickable" back-button visible="false"
-          position="-2 .9 -1.7" rotation="0 35 0">
+        <a-entity id="back" class="clickable" back-button visible="false" position="-1.7 1.33 -2.2" rotation="0 15 0">
             <a-image src="images/arrow_back.png" width=0.3 height=0.3></a-image>
         </a-entity>
 

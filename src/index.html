@@ -29,12 +29,18 @@
 
         <a-entity id="grid" data-grid="categories" visible="true"></a-entity>
 
+        <a-entity id="back" class="clickable" back-button visible="false"
+          position="-2.25 1 -1.85" rotation="0 37 0">
+            <a-image src="images/arrow_back.png" width=0.5 height=0.5></a-image>
+        </a-entity>
+
         <a-entity id="product" visible="false">
             <a-image id="product-desc-1" src="#productDesc1" material="alphaTest: 0.5" width="2" height="2" rotation="0 20 0" position="-2.5 0 -3"></a-image>
             <a-box color="tomato" position="0 0 -2.5"></a-box>
             <a-image id="product-desc-2" src="#productDesc2" material="alphaTest: 0.5" width="2" height="2" rotation="0 -20 0" position="2.5 0 -3"></a-image>
         </a-entity>
     </a-scene>
+  </a-scene>
 </body>
 
 </html>

@@ -39,7 +39,10 @@ export const tile = {
     this.el.addEventListener('click', () => {
       parent.childNodes.forEach( (v,i,a) => {
         // v.emit('fade')
-        // setTimeout(2000,()=> { el.emit('endFade') })
+        setTimeout(()=> { },
+          // v.emit('endFade')
+          // parent.emit('endFade')}
+          2000)
       })
       return this.data.link && linkHandler(this.data.link)
     })

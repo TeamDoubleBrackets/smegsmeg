@@ -11,9 +11,10 @@
 
 <body>
     <a-scene>
-        <a-assets>
+        <a-assets timeout="200000">
             <img id="gallery" crossorigin="anonymous" src="images/bg1.jpg">
             <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+            <a-asset-item id="chair" src="m_chair/scene.gltf"></a-asset-item>
         </a-assets>
         <a-sky id="image-360" radius="10" src="#gallery" position="0 -1 -4"></a-sky>
         <a-camera position="0 0 0">
@@ -34,7 +35,16 @@
 
         <a-entity id="product" visible="false">
             <a-plane position="-2 0 -2.5" height=2 width=1.5></a-plane>
-            <a-box color="tomato" position="0 0 -2.5"></a-box>
+            <a-box opacity="0" position="0 0 -2.5">
+              <a-entity position="0 0 -1" scale="0.015 0.015 0.015" rotation="0 0 0" gltf-model="#chair">
+                <a-animation attribute="rotation"
+                dur="30000"
+                fill="forwards"
+                to="45 2160 10"
+                easing="linear"
+                repeat="indefinite"></a-animation>
+              </a-entity>
+            </a-box>
             <a-plane position="2 0 -2.5" height=2 width=1.5></a-plane>
         </a-entity>
     </a-scene>

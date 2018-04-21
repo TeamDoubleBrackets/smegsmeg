@@ -1,4 +1,5 @@
 import { toRadians } from '../utils'
+import { tileClickHandler } from '../tileClickHandler'
 
 export const tile = {
   schema: {
@@ -31,11 +32,9 @@ export const tile = {
     label.setAttribute('position', { x: 0, y: -0.27, z: 0.02 })
     this.el.appendChild(label)
 
-    this.el.addEventListener('click', () => {
-      if (this.data.link) {
-        this.el.parentNode.setAttribute('data-grid', this.data.link)
-      }
-    })
+    this.el.addEventListener('click', () =>
+      this.data.link && tileClickHandler(this.data.link)
+    )
   },
   update (oldData) {
     if (oldData.icon !== this.data.icon) {

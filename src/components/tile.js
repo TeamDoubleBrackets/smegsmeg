@@ -34,15 +34,14 @@ export const tile = {
     label.setAttribute('position', { x: 0, y: -0.27, z: 0.02 })
     this.el.appendChild(label)
 
-    const parent = this.el.parentNode
-    const el = this.el
     this.el.addEventListener('click', () => {
       if (this.data.link) {
-        parent.childNodes.forEach((child) => {
-          child.emit('anim-out')
-          setTimeout(() => child.emit('anim-in'), 500)
-        })
-        setTimeout(() => linkHandler(this.data.link))
+        const children = this.el.parentNode.childNodes
+        children.forEach(node => node.emit('anim-out'))
+        setTimeout(() => {
+          children.forEach(node => node.emit('anim-in'))
+          linkHandler(this.data.link)
+        }, 500)
       }
     })
   },

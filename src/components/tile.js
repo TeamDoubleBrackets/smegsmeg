@@ -14,6 +14,7 @@ export const tile = {
     setTileGeometry(this)
 
     const image = document.createElement('a-image')
+    image.className = 'image'
     image.setAttribute('src', this.data.icon)
     image.setAttribute('width', 0.5)
     image.setAttribute('height', 0.5)
@@ -21,6 +22,7 @@ export const tile = {
     this.el.appendChild(image)
 
     const label = document.createElement('a-entity')
+    label.className = 'label'
     label.setAttribute('text', {
       value: this.data.label,
       align: 'center',
@@ -33,6 +35,14 @@ export const tile = {
     this.el.addEventListener('click', function () {
       console.log('click')
     })
+  },
+  update (oldData) {
+    if (oldData.icon !== this.data.icon) {
+      this.el.querySelector('.image').setAttribute('src', this.data.icon)
+    }
+    if (oldData.label !== this.data.label) {
+      this.el.querySelector('.label').setAttribute('value', this.data.label)
+    }
   }
 }
 

@@ -1,0 +1,78 @@
+{
+  "categories": [
+    {
+      "icon": "images/nickcage.png",
+      "label": "Koszule",
+      "link": "items-chairs"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Spodnie",
+      "link": "items-chairs"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Buty",
+      "link": "items-chairs"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Sukienki",
+      "link": "items-chairs"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Krzesła",
+      "link": "items-chairs"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Fotele",
+      "link": "items-chairs"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Stoły",
+      "link": "items-chairs"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Kosiarki",
+      "link": "items-chairs"
+    }
+  ],
+  "items-chairs": [
+    {
+      "icon": "images/nickcage.png",
+      "label": "Krzesło komfort"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Siedzisko prezesa"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Krzesło komfort"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Siedzisko prezesa"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Krzesło komfort"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Siedzisko prezesa"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Krzesło komfort"
+    },
+    {
+      "icon": "images/nickcage.png",
+      "label": "Siedzisko prezesa"
+    }
+  ]
+}

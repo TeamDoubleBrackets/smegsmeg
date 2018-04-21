@@ -15,7 +15,8 @@ export const dataGrid = {
       for (let i = 0; i < 8; i++) {
         children[i].setAttribute('tile', {
           icon: values[i].icon,
-          label: values[i].label
+          label: values[i].label,
+          link: values[i].link
         })
       }
     }

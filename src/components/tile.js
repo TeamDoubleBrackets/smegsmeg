@@ -14,6 +14,7 @@ export const tile = {
   init () {
     setTileTransform(this)
     setTileGeometry(this)
+    setAnimation(this)
 
     const image = document.createElement('a-image')
     image.className = 'image'
@@ -33,9 +34,15 @@ export const tile = {
     label.setAttribute('position', { x: 0, y: -0.27, z: 0.02 })
     this.el.appendChild(label)
 
-    this.el.addEventListener('click', () =>
-      this.data.link && linkHandler(this.data.link)
-    )
+    const parent = this.el.parentNode
+    const el = this.el
+    this.el.addEventListener('click', () => {
+      parent.childNodes.forEach( (v,i,a) => {
+        // v.emit('fade')
+        // setTimeout(2000,()=> { el.emit('endFade') })
+      })
+      return this.data.link && linkHandler(this.data.link)
+    })
   },
   update (oldData) {
     if (oldData.icon !== this.data.icon) {
@@ -57,7 +64,7 @@ const CAMERA_OFFSET = 2.5
 function setTileTransform ({ data, el }) {
   const { row, col, nrow, ncol } = data
   const angleOffset = ANGLE_STEP * (ncol / 2 - 0.5) + 90
-
+  
   const phi = col * ANGLE_STEP - angleOffset
   const phiRad = toRadians(phi)
   el.setAttribute('rotation', {
@@ -79,4 +86,19 @@ function setTileGeometry ({ el }) {
   el.setAttribute('material', {
     color: '#FFFFFF'
   })
+}
+
+function setAnimation({ el }) {
+  const child = document.createElement('a-animation')
+  child.setAttribute('attribute', 'position')
+    // row: 1,
+    // col: 1,
+    // nrow: 2,
+    // ncol: 4
+  // })
+  child.setAttribute('to', "0 0 -5")
+  child.setAttribute('dur', 3000)
+  child.setAttribute('begin','fade')
+  child.setAttribute('end', 'endFade')
+  el.appendChild(child)
 }

@@ -16,5 +16,9 @@ export const cylinderGrid = {
         this.el.appendChild(child)
       }
     }
+    // this.el.addEventListener('endFade', function () {
+    //   document.querySelector("#categories").setAttribute('visible',false)
+    //   document.querySelector("#products").setAttribute('visible',true)
+    // })
   }
 }

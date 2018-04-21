@@ -37,14 +37,13 @@ export const tile = {
     const parent = this.el.parentNode
     const el = this.el
     this.el.addEventListener('click', () => {
-      parent.childNodes.forEach( (v,i,a) => {
-        // v.emit('fade')
-        setTimeout(()=> { },
-          // v.emit('endFade')
-          // parent.emit('endFade')}
-          2000)
-      })
-      return this.data.link && linkHandler(this.data.link)
+      if (this.data.link) {
+        parent.childNodes.forEach((child) => {
+          child.emit('anim-out')
+          setTimeout(() => child.emit('anim-in'), 500)
+        })
+        setTimeout(() => linkHandler(this.data.link))
+      }
     })
   },
   update (oldData) {
@@ -67,7 +66,7 @@ const CAMERA_OFFSET = 2.5
 function setTileTransform ({ data, el }) {
   const { row, col, nrow, ncol } = data
   const angleOffset = ANGLE_STEP * (ncol / 2 - 0.5) + 90
-  
+
   const phi = col * ANGLE_STEP - angleOffset
   const phiRad = toRadians(phi)
   el.setAttribute('rotation', {
@@ -92,16 +91,17 @@ function setTileGeometry ({ el }) {
 }
 
 function setAnimation({ el }) {
-  const child = document.createElement('a-animation')
-  child.setAttribute('attribute', 'position')
-    // row: 1,
-    // col: 1,
-    // nrow: 2,
-    // ncol: 4
-  // })
-  child.setAttribute('to', "0 0 -5")
-  child.setAttribute('dur', 3000)
-  child.setAttribute('begin','fade')
-  child.setAttribute('end', 'endFade')
-  el.appendChild(child)
+  const anim1 = document.createElement('a-animation')
+  anim1.setAttribute('attribute', 'scale')
+  anim1.setAttribute('to', "0 0 0")
+  anim1.setAttribute('dur', 300)
+  anim1.setAttribute('begin','anim-out')
+  el.appendChild(anim1)
+
+  const anim2 = document.createElement('a-animation')
+  anim2.setAttribute('attribute', 'scale')
+  anim2.setAttribute('to', "1 1 1")
+  anim2.setAttribute('dur', 300)
+  anim2.setAttribute('begin','anim-in')
+  el.appendChild(anim2)
 }

@@ -17,6 +17,7 @@ export const tile = {
 
     const image = document.createElement('a-image')
     image.className = 'image'
+    image.style.borderRadius = '2px'
     image.setAttribute('width', 0.5)
     image.setAttribute('height', 0.5)
     image.setAttribute('position', { x: 0, y: 0.1, z: 0.02 })
@@ -27,7 +28,7 @@ export const tile = {
     label.setAttribute('text', {
       align: 'center',
       color: '#000',
-      width: 3
+      width: 2
     })
     label.setAttribute('position', { x: 0, y: -0.27, z: 0.02 })
     this.el.appendChild(label)

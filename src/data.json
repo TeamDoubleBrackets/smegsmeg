@@ -1,84 +1,84 @@
 {
   "categories": [
     {
-      "icon": "images/nickcage.png",
-      "label": "Koszule",
+      "icon": "icons/shirt.svg",
+      "label": "Shirts",
       "link": "items-chairs"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Spodnie",
+      "icon": "icons/jeans.svg",
+      "label": "Pants",
       "link": "items-chairs"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Buty",
+      "icon": "icons/shoe.svg",
+      "label": "Shoes",
       "link": "items-chairs"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Sukienki",
+      "icon": "icons/dress.svg",
+      "label": "Dresses",
       "link": "items-chairs"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Krzesła",
+      "icon": "icons/chair.svg",
+      "label": "Chairs",
       "link": "items-chairs"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Fotele",
+      "icon": "icons/armchair.svg",
+      "label": "Armchairs",
       "link": "items-chairs"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Stoły",
+      "icon": "icons/table.svg",
+      "label": "Tables",
       "link": "items-chairs"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Kosiarki",
+      "icon": "icons/lawn-mower.svg",
+      "label": "Kosiarks",
       "link": "items-chairs"
     }
   ],
   "items-chairs": [
     {
-      "icon": "images/nickcage.png",
-      "label": "Krzesło komfort",
+      "icon": "icons/chairs/chair_basic.svg",
+      "label": "Basic chair",
       "link": "product"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Siedzisko prezesa",
+      "icon": "icons/chairs/chair_premium.svg",
+      "label": "Extended chair",
       "link": "product"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Krzesło komfort",
+      "icon": "icons/chairs/chair_ultra.svg",
+      "label": "Ultra chair",
       "link": "product"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Siedzisko prezesa",
+      "icon": "icons/chairs/chair_ultramaster.svg",
+      "label": "#TDB signed chair",
       "link": "product"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Krzesło komfort",
+      "icon": "icons/chairs/chair_wedkarz_mode_ON.svg",
+      "label": "\"Wedkarz\" chair",
       "link": "product"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Siedzisko prezesa",
+      "icon": "icons/chairs/krzeslostol.svg",
+      "label": "\"Chairtable\"",
       "link": "product"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Krzesło komfort"
+      "icon": "icons/koniecmacieju.svg",
+      "label": "Coming soon"
     },
     {
-      "icon": "images/nickcage.png",
-      "label": "Siedzisko prezesa"
+      "icon": "icons/koniecmacieju.svg",
+      "label": "Coming soon"
     }
   ]
 }
